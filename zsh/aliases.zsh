@@ -1,3 +1,4 @@
+# A
 # Aliases in this file are bash and zsh compatible
 
 # Don't change. The following determines where YADR is installed.
@@ -151,6 +152,10 @@ alias ts='thin start -a ${VM_IP:-127.0.0.1}'
 alias ms='mongrel_rails start'
 alias tfdl='tail -f log/development.log'
 alias tftl='tail -f log/test.log'
+
+alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
 
 alias ka9='killall -9'
 alias k9='kill -9'
