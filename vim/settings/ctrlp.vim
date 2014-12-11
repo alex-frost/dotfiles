@@ -54,3 +54,9 @@ map ,jT :CtrlP test<CR>
 "Cmd-Shift-(M)ethod - jump to a method (tag in current file)
 "Ctrl-m is not good - it overrides behavior of Enter
 nnoremap <silent> <D-M> :CtrlPBufTag<CR>
+
+" Start in regexp mode
+let g:ctrlp_regexp = 1
+
+" Space inserts a wildcard
+let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>'] }
