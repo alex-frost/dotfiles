@@ -1,6 +1,6 @@
 " Make it beautiful - colors and fonts
 
-if has("gui_running")
+" if has("gui_running")
   "tell the term has 256 colors
   set t_Co=256
 
@@ -17,7 +17,7 @@ if has("gui_running")
   else
     set guifont=Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
   end
-else
+" else
   let g:CSApprox_loaded = 1
 
   " For people using a terminal that is not Solarized
@@ -25,7 +25,7 @@ else
     let g:solarized_termcolors=256
     let g:solarized_termtrans=1
   end
-endif
+" endif
 
 colorscheme solarized
 set background=dark
