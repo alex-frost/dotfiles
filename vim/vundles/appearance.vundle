@@ -8,3 +8,6 @@ Bundle "chriskempson/base16-vim"
 
 " Required for Gblame in terminal vim
 Bundle "godlygeek/csapprox.git" 
+Bundle 'vim-pandoc/vim-rmarkdown'
+Bundle 'vim-pandoc/vim-pandoc'
+Bundle 'vim-pandoc/vim-pandoc-syntax'
