@@ -86,8 +86,9 @@ alias gcim='git ci -m'
 alias gci='git ci'
 alias gco='git co'
 alias gcp='git cp'
-alias ga='git add -A'
 alias gap='git add -p'
+alias gdbug='if [[ `gd | grep "binding.pry\|console.log"` != "" ]]; then; echo "\n\n\t## REMOVE DEBUGGING ###\n"; fi; '
+alias ga='gdbug; git add -A'
 alias guns='git unstage'
 alias gunc='git uncommit'
 alias gm='git merge'
@@ -141,7 +142,6 @@ alias l='less'
 alias lh='ls -alt | head' # see the last modified files
 alias screen='TERM=screen screen'
 alias cl='clear'
-
 # Zippin
 alias gz='tar -zcvf'
 
