@@ -1,0 +1,74 @@
+
+"
+:au FocusLost * silent! wa
+
+" Clipboard stuff
+"
+inoremap <Tab> <C-n>
+
+set clipboard=unnamedplus " this copies to debian's clipboard
+
+"make the font pretty
+ if has('gui_running')
+   set guifont=Inconsolata\ XL\ 10,Inconsolata\ 15,Monaco\ 12
+ endif
+
+"start NERDTree on open
+:au VimEnter * NERDTree | wincmd p
+
+" More natural split opening
+"
+"http://robots.thoughtbot.com/post/48275867281/vim-splits-move-faster-and-more-naturally
+set splitbelow
+set splitright
+
+
+" some annoyances with capital letters
+nmap :Q :q
+nmap :W :w
+
+"""""""""""""""""""""""""""""""""""""""""
+" PROMOTE VARIABLE TO RSPEC LET http://coderwall.com/p/th43aw
+"""""""""""""""""""""""""""""""""""""""""
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+
+:command! PromoteToLet :call PromoteToLet()
+:map pr :PromoteToLet<CR>
+
+let g:session_autoload = 'no'
+
+" Resizing windows
+map <F7> <C-w>15>
+map <F8> <C-w>15<lt>
+map <S-F7> <C-w>5+
+map <S-F8> <C-w>5-
+
+"enable copying formatted text
+"from within vim as HTML
+vmap _yh :TOhtml<CR>:sav!  temp.html<CR>:bd<CR>:!open temp.html<CR><CR>:sleep 1<CR>:!rm temp.html<CR><CR>:e %<CR>
+
+au VimEnter * RainbowParenthesesActivate
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+" Permanent very magic mode
+" http://vim.wikia.com/wiki/Simplifying_regular_expressions_using_magic_and_no-magic
+cnoremap %s/ %smagic/
+cnoremap \>s/ \>smagic/
+nnoremap :g/ :g/\v
+nnoremap :g// :g//
+
+" Autosave
+"let g:auto_save = 1
+
+autocmd BufWritePre * :%s/\s\+$//e
+
+" https://github.com/tpope/vim-fugitive/issues/518#issuecomment-5896105
+let g:netrw_browsex_viewer = "gnome-open-fixed"
