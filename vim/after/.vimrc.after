@@ -72,3 +72,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " https://github.com/tpope/vim-fugitive/issues/518#issuecomment-5896105
 let g:netrw_browsex_viewer = "gnome-open-fixed"
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_quiet_messages = {}
+
+" auto import go pakcages
+let g:go_fmt_command = "goimports"
