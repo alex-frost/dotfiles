@@ -29,3 +29,4 @@ Bundle "goldfeld/ctrlr.vim"
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'fatih/vim-go'
 Bundle 'vim-scripts/vim-auto-save'
+Bundle "editorconfig/editorconfig-vim"
