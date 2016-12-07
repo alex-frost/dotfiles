@@ -192,10 +192,10 @@ alias zrdbtp='zeus rake db:test:prepare'
 
 # Rspec
 alias rs='rspec spec'
-alias sr='spring rspec'
-alias src='spring rails c'
-alias srgm='spring rails g migration'
-alias srdm='spring rake db:migrate'
+alias sr='be spring rspec'
+alias src='be spring rails c'
+alias srgm='be spring rails g migration'
+alias srdm='be spring rake db:migrate db:test:prepare'
 alias srdt='spring rake db:migrate'
 alias srdmt='spring rake db:migrate db:test:prepare'
 
@@ -213,7 +213,7 @@ alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall 
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
 alias dbtp='spring rake db:test:prepare'
-alias dbm='spring rake db:migrate'
+alias dbm='be spring rake db:migrate db:test:prepare'
 alias dbmr='spring rake db:migrate:redo'
 alias dbmd='spring rake db:migrate:down'
 alias dbmu='spring rake db:migrate:up'
