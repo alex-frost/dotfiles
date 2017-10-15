@@ -72,8 +72,16 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " https://github.com/tpope/vim-fugitive/issues/518#issuecomment-5896105
 let g:netrw_browsex_viewer = "gnome-open-fixed"
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_quiet_messages = { 'regex': 'possibly useless use of .* in void context\|has too many lines\|Assignment Branch Condition size for' }
+let g:ale_linters = {
+      \ 'javascript': ['eslint'],
+      \ 'jsx': ['eslint'],
+      \ 'ruby': ['rubocop'],
+      \ 'sass': ['sass_lint'],
+      \ 'scss': ['sass_lint'],
+      \}
+" let g:ale_javascript_eslint_executable = 'eslint_d'
+" let g:ale_quiet_messages = { 'regex': 'possibly useless use of .* in void context\|has too many lines\|Assignment Branch Condition size for' }
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_delay = 900
 " auto import go pakcages
 let g:go_fmt_command = "goimports"
