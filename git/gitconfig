@@ -129,9 +129,12 @@
 [user]
 	name = Nikolai B
 	email = nikolai-b@users.noreply.github.com
+	signingkey = C29AF92CCD98C0C92F28C3A94B3761604E058FC5
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
 [credential]
 	helper = cache
+[commit]
+	gpgsign = true
