@@ -86,3 +86,4 @@ let g:ale_lint_delay = 900
 " auto import go pakcages
 let g:go_fmt_command = "goimports"
 let g:fugitive_gitlab_domains = ['https://git.kubernetes.farmdrop.com']
+set noballooneval
