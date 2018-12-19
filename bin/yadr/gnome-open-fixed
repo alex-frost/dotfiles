@@ -1,4 +1,4 @@
 #!/bin/bash -eu
 # from https://github.com/tpope/vim-fugitive/issues/518#issuecomment-58961059
 
-gnome-open "$@" &
+xdg-open "$@" &
