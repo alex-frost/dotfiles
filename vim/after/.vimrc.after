@@ -85,5 +85,7 @@ let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_delay = 900
 " auto import go pakcages
 let g:go_fmt_command = "goimports"
-let g:fugitive_gitlab_domains = ['https://git.kubernetes.farmdrop.com']
 set noballooneval
+if filereadable(expand("~/.yadr/vim/after/THIS_FILE_HAS_SECRETS.vim"))
+  source ~/.yadr/vim/after/THIS_FILE_HAS_SECRETS.vim
+endif
