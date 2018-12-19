@@ -30,7 +30,10 @@ alias cls='clear;ls'
 
 # Show human friendly numbers and colors
 alias df='df -h'
+alias ll='ls -alGh --color=auto'
+alias ls='ls -Gh --color=auto'
 alias du='du -h -d 2'
+alias grep='grep --color=auto'
 
 if [[ $platform == 'linux' ]]; then
   alias ll='ls -alh --color=auto'
@@ -143,6 +146,7 @@ alias cl='clear'
 alias gz='tar -zcvf'
 
 # Ruby
+
 alias c='rails c' # Rails 3
 alias co='script/console' # Rails 2
 alias cod='script/console --debugger'
